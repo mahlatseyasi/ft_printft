@@ -6,11 +6,11 @@
 /*   By: mkhoza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/27 14:44:15 by mkhoza            #+#    #+#             */
-/*   Updated: 2018/07/27 14:47:22 by mkhoza           ###   ########.fr       */
+/*   Updated: 2018/08/23 08:47:40 by mkhoza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	FT_MAX(int val1, int val2)
+int	ft_maxi(int val1, int val2)
 {
 	if (val1 < val2)
 		return (val2);

@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbrbase_fd.c                                 :+:      :+:    :+:   */
+/*   width_pad.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhoza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/31 13:42:26 by mkhoza            #+#    #+#             */
-/*   Updated: 2018/08/22 16:30:57 by mkhoza           ###   ########.fr       */
+/*   Created: 2018/07/27 11:59:48 by mkhoza            #+#    #+#             */
+/*   Updated: 2018/08/23 12:49:54 by mkhoza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_putnbrbase_fd_inner(uintmax_t nbr, char *base, size_t baselen,int fd)
+void	ft_width_pad(int len, int width, char padwidth)
 {
-	if (nbr >= baselen)
+	while (len < width)
 	{
-		ft_putnbrbase_fd_inner(nbr / baselen, base, baselen, fd);
-		ft_putnbrbase_fd_inner(nbr % baselen, base, baselen, fd);
+		ft_putchar(padwidth);
+		len++;
 	}
-	else
-		ft_putchar_fd(base[nbr], fd);
-}
-
-void		ft_putnbrbase_fd(uintmax_t nbr, char *base, int fd)
-{
-	ft_putnbrbase_fd_inner(nbr, base, ft_strlen(base), fd);
 }

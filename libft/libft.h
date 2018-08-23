@@ -6,7 +6,7 @@
 /*   By: mkhoza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 11:12:56 by mkhoza            #+#    #+#             */
-/*   Updated: 2018/07/31 14:10:44 by mkhoza           ###   ########.fr       */
+/*   Updated: 2018/08/23 12:50:53 by mkhoza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <sys/types.h>
 # include <wchar.h>
 
-int		FT_MAX(int val1, int val2);
+int		ft_maxi(int val1, int val2);
 int		ft_strlen(const char *str);
 int		ft_strlen_fd(const char *str, int fd);
 int		ft_isdigit(int c);
@@ -54,7 +54,7 @@ char	**ft_strsplit(char const *s, char c);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbrbase(uintmax_t nbr, char *base);
-void	ft_putchar(wchar_t c);
+void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char const *str);
 void	ft_putstr_fd(char const *s, int fd);
@@ -79,6 +79,7 @@ void	ft_striteri(char *s, void(*f)(unsigned int, char *));
 void	ft_strclr(char *s);
 void	*ft_memalloc(size_t size);
 void	ft_putnbrbase_fd(uintmax_t nbr, char *base, int fd);
+void	ft_width_pad(int len, int width, char padwidth);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 #endif
